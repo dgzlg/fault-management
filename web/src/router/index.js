@@ -4,7 +4,6 @@ import Index from '@/components/Index'
 import home from '@/views/home'
 import Login from '@/components/Login'
 import Organization from '@/views/system/Organization'
-import EnterpriseManagement from '@/views/system/EnterpriseManagement'
 import FactoryManagement from '@/views/system/FactoryManagement'
 import Role from '@/views/system/Role'
 import TeamGroup from '@/views/system/TeamGroup'
@@ -14,8 +13,11 @@ import Log from '@/views/system/Log'
 import flowGraph from '@/views/system/flowGraph'
 import BuildTable from '@/views/system/BuildTable'
 
-// 设备
+// 设备管理
 import list from '@/views/Equipment/list'
+import equipmentTree from '@/views/Equipment/equipmentTree'
+import EqDetails from '@/views/Equipment/EqDetails'
+import Inventory from '@/views/Equipment/Inventory'
 
 
 Vue.use(Router)
@@ -35,8 +37,7 @@ export default new Router({
       children:[
         {path:'/home',name:'home',meta:{ title:'首页'},component:home},
         {path:'/Organization',name:'Organization',meta:{ title:'组织架构',type:"系统管理"},component:Organization},
-        {path:'/EnterpriseManagement',name:'EnterpriseManagement',meta:{ title:'企业管理',type:"系统管理"},component:EnterpriseManagement},
-        {path:'/FactoryManagement',name:'FactoryManagement',meta:{ title:'工厂管理',type:"系统管理"},component:FactoryManagement},
+        {path:'/FactoryManagement',name:'FactoryManagement',meta:{ title:'区域管理',type:"系统管理"},component:FactoryManagement},
         {path:'/Role',name:'Role',meta:{ title:'角色权限',type:"系统管理"},component:Role},
         {path:'/TeamGroup',name:'TeamGroup',meta:{ title:'班组管理',type:"系统管理"},component:TeamGroup},
         {path:'/Personnel',name:'Personnel',meta:{ title:'人员管理',type:"系统管理"},component:Personnel},
@@ -53,7 +54,11 @@ export default new Router({
       component: Index,
       redirect:'/home', //index主页默认加载home页面
       children:[
-        {path:'/list',name:'list',meta:{ title:'设备台账',type:"设备管理"},component:list},
+        {path:'/list',name:'list',meta:{ title:'设备台账',type:"设备管理"},component:list,children:[
+            {path:'/EqDetails',name:'EqDetails',meta:{ title:'设备详情'},component:EqDetails},
+          ]},
+        {path:'/equipmentTree',name:'equipmentTree',meta:{ title:'设备结构树',type:"设备管理"},component:equipmentTree},
+        {path:'/Inventory',name:'Inventory',meta:{ title:'设备盘点',type:"设备管理"},component:Inventory},
       ]
     },
     {

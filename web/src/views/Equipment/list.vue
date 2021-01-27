@@ -1,13 +1,22 @@
 <template>
-  <p @click="$router.push('/')">qu</p>
 </template>
 
 <script>
   export default {
-    name: "list"
+    name: "list",
+    data(){
+      return{
+
+      }
+    },
+    mounted(){
+
+    },
+    methods:{
+
+    }
   }
 </script>
 
 <style scoped>
-
 </style>

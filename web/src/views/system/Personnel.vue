@@ -57,7 +57,7 @@
             {type:"primary",label:"添加",hasPermissions:['管理人员']},
             {type:"warning",label:"修改",hasPermissions:['管理人员']},
             {type:"danger",label:"删除",hasPermissions:['管理人员']},
-            {type:"primary",label:"分配角色",clickEvent:"privileges",hasPermissions:['管理人员']},
+            {type:"primary",label:"分配角色",clickEvent:"privileges",hasPermissions:['分配权限']},
             {type:"primary",label:"分配班组",clickEvent:"teamGroup",hasPermissions:['管理人员']},
           ],
         },

@@ -11,11 +11,11 @@
   font-size: 18px;
   vertical-align: middle;
 }
+.body-container{
+  background: #eef1f6;
+}
 /* 白色主题 */
 .white-theme{
-  .body-container{
-    background: #F6F9F9;
-  }
   /* 主页头部 */
   .el-header{
     overflow: hidden;
@@ -49,13 +49,19 @@
     color: #1E222B;
   }
   /* 侧边导航栏 */
+  .aside-menu{
+    overflow: auto;
+  }
+  .aside-menu::-webkit-scrollbar {
+    display: none;
+  }
   .menu-ul{
     margin-top: 20px;
     border-right: none;
-    background: #ffffff;
+    background: #f5f5f5;
   }
   .menu-ul .el-menu{
-    background-color: #FFFFFF;
+    background-color: #f5f5f5;
     border-right: none;
   }
   .menu-ul .el-menu-item:hover{
@@ -74,7 +80,7 @@
     line-height: 45px;
   }
   .left-aside{
-    background: #ffffff;
+    background-color: #f5f5f5;
     box-shadow:3px 0px 3px rgba(0,0,0,0.08);
   }
   .aside-foot{
@@ -90,85 +96,9 @@
     background-color: #168DD7;
     color: #fff;
   }
-  /* 下拉系统导航 */
-  .downSystemNav{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px;
-    background: #fff;
-    clear: both;
-    overflow: hidden;
-    z-index: 4;
-  }
-  /* 公用组件样式 */
-  .platformContainer{
-    width: 100%;
-    background: #ffffff;
-    color: #000;
-    border-radius: 4px;
-    border: 1px solid #E6E6E6;
-    padding: 15px;
-    margin-bottom: 15px;
-    clear: both;
-    overflow: hidden;
-  }
-  .cardContainer{
-    width: 100%;
-    background: #ffffff;
-    color: #000;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    box-shadow:0px 0px 6px rgba(0,0,0,0.16);
-    padding: 15px;
-    margin-bottom: 15px;
-    clear: both;
-    overflow: hidden;
-  }
-  .cardContainerHead{
-    width: 100%;
-    background: #ffffff;
-    color: #000;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    box-shadow:0px 0px 6px rgba(0,0,0,0.16);
-    padding: 10px 15px;
-    margin-bottom: 4px;
-  }
-  .colItemContainer{
-    width: 100%;
-    background: #ffffff;
-    border: 1px solid #E6E6E6;
-    color: #000;
-    border-radius: 4px;
-    padding: 15px;
-    margin-bottom: 15px;
-    clear: both;
-    overflow: hidden;
-  }
-  /** 手风琴 **/
-  .el-collapse .el-collapse-item__header{
-    padding: 0 15px;
-    font-size: 16px;
-    border: 1px solid #EBEEF5;
-  }
-  .el-collapse .el-collapse-item__wrap{
-    padding: 10px;
-  }
-  .el-collapse .el-collapse-item__wrap .el-collapse-item__content{
-    padding-bottom: 0;
-  }
-  /* el表格 */
-  .el-table__body tr.current-row>td{
-    background-color: #b6d9ff;
-  }
 }
 /* 绿色主题 */
 .green-theme{
-  .body-container{
-    background: #67bea4;
-  }
   /* 主页头部 */
   .el-header{
     overflow: hidden;
@@ -201,45 +131,38 @@
     color: #1E222B;
   }
   /* 侧边导航栏 */
+  .aside-menu{
+    overflow: auto;
+  }
+  .aside-menu::-webkit-scrollbar {
+    display: none;
+  }
   .menu-ul{
     margin-top: 20px;
     border-right: none;
-    background-color: #0A9168;
+    background: #ffffff;
   }
   .menu-ul .el-menu{
-    background-color: #0A9168;
+    background-color: #FFFFFF;
     border-right: none;
   }
-  .menu-ul .el-menu-item{
-    color: #ffffff;
-  }
-  .menu-ul .el-menu-item i{
-    color: #ffffff;
-  }
   .menu-ul .el-menu-item:hover{
-    background: #ffffff;
-    color: #1E222B;
-  }
-  .menu-ul .el-menu-item:focus{
-    background-color: #ffffff;
-    color: #1E222B;
+    background: #0A9168;
+    color: #ffffff;
   }
   .menu-ul .el-menu-item:hover i{
-    color: #1E222B;
+    color: #ffffff;
   }
   .menu-ul .el-menu-item.is-active {
-    background-color: #ffffff;
-    color: #1E222B;
-  }
-  .menu-ul .el-menu-item.is-active i {
-    color: #1E222B;
+    background-color: #0A9168;
+    color: #ffffff;
   }
   .el-menu-item, .el-submenu__title{
     height: 45px;
     line-height: 45px;
   }
   .left-aside{
-    background-color: #0A9168; /* 不支持线性的时候显示 */
+    background-color: #f5f5f5; /* 不支持线性的时候显示 */
     box-shadow:3px 0px 3px rgba(0,0,0,0.08);
   }
   .aside-foot{
@@ -252,98 +175,8 @@
     padding-top: 20px;
   }
   .aside-foot .el-button{
-    background-color: #ffffff;
-    color: #0A9168;
-  }
-  /* 下拉系统导航 */
-  .downSystemNav{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px;
-    background-color: #0A9168; /* 不支持线性的时候显示 */
-    background-image: linear-gradient(to right, #0A9168 , #b1e2d3);
-    clear: both;
-    overflow: hidden;
-    z-index: 4;
-  }
-  /* 公用组件样式 */
-  .platformContainer{
-    width: 100%;
-    background: #ffffff;
-    color: #000;
-    border-radius: 4px;
-    border: 1px solid #E6E6E6;
-    padding: 15px;
-    margin-bottom: 15px;
-    clear: both;
-    overflow: hidden;
-  }
-  .cardContainer{
-    width: 100%;
-    background: #ffffff;
-    color: #000;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    box-shadow:0px 0px 6px rgba(0,0,0,0.16);
-    padding: 15px;
-    margin-bottom: 15px;
-    clear: both;
-    overflow: hidden;
-  }
-  .cardContainerHead{
-    width: 100%;
-    background: #ffffff;
-    color: #000;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    box-shadow:0px 0px 6px rgba(0,0,0,0.16);
-    padding: 10px 15px;
-    margin-bottom: 4px;
-  }
-  .colItemContainer{
-    width: 100%;
-    background: #ffffff;
-    border: 1px solid #E6E6E6;
-    color: #000;
-    border-radius: 4px;
-    padding: 15px;
-    margin-bottom: 15px;
-    clear: both;
-    overflow: hidden;
-  }
-  .page-title{
-    width: 100%;
-    margin-bottom:15px;
-    background: #ffffff;
-    box-shadow:0px 0px 6px rgba(0,0,0,0.16);
-    color: #000;
-    font-size: 18px;
-    height: 48px;
-    line-height: 48px;
-    padding: 0 15px;
-    border-radius:4px;
-  }
-  .page-title .page-title-radio{
-    float: right;
-    line-height: 48px;
-  }
-  /** 手风琴 **/
-  .el-collapse .el-collapse-item__header{
-    padding: 0 15px;
-    font-size: 16px;
-    border: 1px solid #EBEEF5;
-  }
-  .el-collapse .el-collapse-item__wrap{
-    padding: 10px;
-  }
-  .el-collapse .el-collapse-item__wrap .el-collapse-item__content{
-    padding-bottom: 0;
-  }
-  /* el表格 */
-  .el-table__body tr.current-row>td{
-    background-color: #b6d9ff;
+    background-color: #0A9168;
+    color: #fff;
   }
 }
 
@@ -357,6 +190,67 @@
 }
 .themeItem.active{
   border: 2px solid #168DD7;
+}
+/* 公用组件样式 */
+.platformContainer{
+  width: 100%;
+  background: #ffffff;
+  color: #000;
+  border-radius: 4px;
+  border: 1px solid #E6E6E6;
+  padding: 15px;
+  margin-bottom: 15px;
+  clear: both;
+  overflow: hidden;
+}
+.cardContainer{
+  width: 100%;
+  background: #ffffff;
+  color: #000;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow:0px 0px 6px rgba(0,0,0,0.16);
+  padding: 15px;
+  margin-bottom: 15px;
+  clear: both;
+  overflow: hidden;
+}
+.cardContainerHead{
+  width: 100%;
+  background: #ffffff;
+  color: #000;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  box-shadow:0px 0px 6px rgba(0,0,0,0.16);
+  padding: 10px 15px;
+  margin-bottom: 4px;
+}
+.colItemContainer{
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #E6E6E6;
+  color: #000;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 15px;
+  clear: both;
+  overflow: hidden;
+}
+/** 手风琴 **/
+.el-collapse .el-collapse-item__header{
+  padding: 0 15px;
+  font-size: 16px;
+  border: 1px solid #EBEEF5;
+}
+.el-collapse .el-collapse-item__wrap{
+  padding: 10px;
+}
+.el-collapse .el-collapse-item__wrap .el-collapse-item__content{
+  padding-bottom: 0;
+}
+/* el表格 */
+.el-table__body tr.current-row>td{
+  background-color: #b6d9ff;
 }
 /* 批记录表格 */
 .elementTable tr td.isInput{

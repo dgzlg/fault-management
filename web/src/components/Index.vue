@@ -3,7 +3,7 @@
     <!-- 头部 -->
     <el-header class="body-head">
       <div class="head-menu floatLeft">
-        <router-link to='/home'><span class="head-title">智能设备管理系统</span></router-link>
+        <router-link to='/home'><span class="head-title">智能故障管理系统</span></router-link>
       </div>
       <div class="head-menu floatRight">
         <ul>
@@ -102,11 +102,12 @@
         systemOptions:[
           {title: '设备管理',icon:"fa fa-archive",mainMenu:[
               {title:"设备台账",url:"/list"},
+              {title:"设备结构树",url:"/equipmentTree"},
+              {title:"设备盘点",url:"/Inventory"},
             ]},
           {title: '系统管理',icon:"el-icon-s-tools",mainMenu:[
               {title:"组织架构",url:"/Organization"},
-              {title:"企业管理",url:"/EnterpriseManagement"},
-              {title:"工厂管理",url:"/FactoryManagement"},
+              {title:"区域管理",url:"/FactoryManagement"},
               {title:"角色权限",url:"/Role"},
               {title:"班组管理",url:"/TeamGroup"},
               {title:"人员管理",url:"/Personnel"},
@@ -140,11 +141,11 @@
     created(){
       window.addEventListener('resize', this.getMenuHeight);
       this.getMenuHeight()
-      if(sessionStorage.getItem("LoginStatus")) {
-        this.$store.commit('setUser',sessionStorage.getItem('WorkNumber'))
-      }else{
-        this.$router.push("/login");
-      }
+      // if(sessionStorage.getItem("LoginStatus")) {
+      //   this.$store.commit('setUser',sessionStorage.getItem('WorkNumber'))
+      // }else{
+      //   this.$router.push("/login");
+      // }
       this.getBreadcrumb()
       if(this.$route.path === "/home"){ //判断当前路由 设置当前路由对应的菜单
         this.defaultActiveUrl = ""
@@ -171,9 +172,9 @@
     methods:{
       getMenuHeight(){
         if(this.menuIsCollapse){
-          this.selfHeight.height = window.innerHeight - 490+'px';
+          this.selfHeight.height = window.innerHeight - 180+'px';
         }else{
-          this.selfHeight.height = window.innerHeight - 360+'px';
+          this.selfHeight.height = window.innerHeight - 180+'px';
         }
       },
       menuSelect(url,title){  //点击菜单跳转时  添加query参数避免相同路由跳转时报错

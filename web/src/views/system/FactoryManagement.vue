@@ -16,12 +16,12 @@
     data(){
       return {
         PermissionTableData:{
-          tableName:"Factory",
+          tableName:"AreaMaintain",
           column:[
             {label:"ID",prop:"ID",type:"input",value:"",disabled:true,showField:false,searchProp:false},
-            {prop:"EnterpriseName",label:"所属企业",type:"input",value:""},
-            {prop:"FactoryName",label:"厂名",type:"input",value:""},
-            {prop:"Region",label:"所在地区",type:"input",value:""},
+            {prop:"AreaCode",label:"区域编码",type:"input",value:""},
+            {prop:"AreaName",label:"区域名称",type:"input",value:""},
+            {prop:"FactoryName",label:"所属厂区",type:"input",value:""},
           ],
           data:[],
           limit:5,
